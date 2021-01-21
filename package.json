@@ -1,11 +1,43 @@
 {
-  "name": "shnewsboat",
+  "name": "webpeek",
   "version": "0.0.1",
   "description": "This is an Electron-based RSS client client that tries to imitate user experience of newsboat but with decent GUI",
-  "main": "index.js",
+  "repository": "ssh://git@git.home:33222/tony/webpeek.git",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "test": "standard --verbose | snazzy",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "Tony Miller",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dbus": "^1.0.7",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.2.0",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [],
+    "ignore": [
+      "dist/**/*"
+    ]
+  },
+  "build": {
+    "appId": "xyz.tmlr.webpeek",
+    "productName": "webpeek",
+    "linux": {
+      "target": [
+        "deb",
+        "zip"
+      ]
+    }
+  }
 }
