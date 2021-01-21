@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "description": "This is an Electron-based RSS client client that tries to imitate user experience of newsboat but with decent GUI",
   "repository": "ssh://git@git.home:33222/tony/webpeek.git",
+  "homepage": "https://git.home/tony/webpeek",
   "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "Tony Miller",
+      "email": "maintainer@tmlr.xyz"
+    }
+  ],
   "scripts": {
     "start": "electron .",
     "test": "standard --verbose | snazzy",
@@ -11,7 +18,10 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
-  "author": "Tony Miller",
+  "author": {
+    "name": "Tony Miller",
+    "email": "maintainer@tmlr.xyz"
+  },
   "license": "ISC",
   "dependencies": {
     "dbus": "^1.0.7",
