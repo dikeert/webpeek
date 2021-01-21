@@ -1,0 +1,11 @@
+{
+  "name": "shnewsboat",
+  "version": "0.0.1",
+  "description": "This is an Electron-based RSS client client that tries to imitate user experience of newsboat but with decent GUI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Miller",
+  "license": "ISC"
+}
