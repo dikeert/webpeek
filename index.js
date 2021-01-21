@@ -97,7 +97,7 @@ class Server extends DBusSupport {
 
 class Client extends DBusSupport {
   sanitize (url) {
-    if (url.startsWith('http://') || url.startsWith('https://')) {
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('file://')) {
       return url
     } else {
       return `http://${url}`
